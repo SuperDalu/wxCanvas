@@ -4,6 +4,7 @@ export default{
     animTime: '', // 动画执行时间
   },
   options:{
+    // 绘制圆形进度条方法
     run(c, w, h) {
       let that = this;
       var num = (2 * Math.PI / 100 * c) - 0.5 * Math.PI;
@@ -23,7 +24,9 @@ export default{
   /**
    * start 起始百分比
    * end 结束百分比
+   * w,h 其实就是圆心横纵坐标
    */
+  // 动画效果实现
   canvasTap(start, end, time, w, h) {
     var that = this;
     start++;
